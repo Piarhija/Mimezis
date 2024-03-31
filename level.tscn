@@ -1,9 +1,34 @@
-[gd_scene load_steps=3 format=3 uid="uid://fp5hlt7rnv32"]
+[gd_scene load_steps=8 format=3 uid="uid://fp5hlt7rnv32"]
 
-[ext_resource type="Texture2D" uid="uid://cqv3rkidfqw2t" path="res://icon.svg" id="1_imsku"]
-[ext_resource type="Script" path="res://sprite_2d.gd" id="2_rfwu0"]
+[ext_resource type="Texture2D" uid="uid://bxtvx7guxxsp4" path="res://Screenshot 2024-03-31 at 20.52.03.png" id="1_6aibq"]
+[ext_resource type="Script" path="res://Sprite2D.gd" id="2_85udr"]
+[ext_resource type="Script" path="res://level.gd" id="2_g2dkq"]
+[ext_resource type="Script" path="res://Sprite2D2.gd" id="3_7d4pc"]
+[ext_resource type="AudioStream" uid="uid://km4flvlmuqhe" path="res://sounds/meow.mp3" id="4_040cb"]
+[ext_resource type="Script" path="res://Sprite2D3.gd" id="5_dje1j"]
+[ext_resource type="Script" path="res://AudioStreamPlayer2D.gd" id="5_wceq3"]
 
-[node name="Sprite2D" type="Sprite2D"]
-position = Vector2(403, 265)
-texture = ExtResource("1_imsku")
-script = ExtResource("2_rfwu0")
+[node name="Node2D" type="Node2D"]
+script = ExtResource("2_g2dkq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(521, 404)
+scale = Vector2(0.140306, 0.170775)
+texture = ExtResource("1_6aibq")
+script = ExtResource("2_85udr")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(921, 350)
+scale = Vector2(0.140306, 0.170775)
+texture = ExtResource("1_6aibq")
+script = ExtResource("3_7d4pc")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(644, 248)
+scale = Vector2(0.140306, 0.170775)
+texture = ExtResource("1_6aibq")
+script = ExtResource("5_dje1j")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_040cb")
+script = ExtResource("5_wceq3")
